@@ -1,48 +1,32 @@
-# Wordpress - ignore core, configuration, examples, uploads and logs.
-# https://github.com/github/gitignore/blob/main/WordPress.gitignore
+# Node & Python
+node_modules/
+.env
+__pycache__/
+*.pyc
 
-# Core
-#
-# Note: if you want to stage/commit WP core files
-# you can delete this whole section/until Configuration.
-/wp-admin/
-/wp-content/index.php
-/wp-content/languages
-/wp-content/plugins/index.php
-/wp-content/themes/index.php
-/wp-includes/
-/index.php
-/license.txt
-/readme.html
-/wp-*.php
-/xmlrpc.php
+# System
+.DS_Store
+Thumbs.db
 
-# Configuration
+# WordPress
 wp-config.php
+wp-content/uploads/
+wp-content/cache/
+wp-content/backups/
 
-# Example themes
-/wp-content/themes/twenty*/
-
-# Example plugin
-/wp-content/plugins/hello.php
-
-# Uploads
-/wp-content/uploads/
-
-# Log files
+# IDEs / Editors
+.vscode/
+.idea/
 *.log
 
-# htaccess
-/.htaccess
+# Git / OS Noise
+*.swp
+*.bak
+*.tmp
+*.zip
+*.tar.gz
 
-# All plugins
-#
-# Note: If you wish to whitelist plugins,
-# uncomment the next line
-#/wp-content/plugins
-
-# All themes
-#
-# Note: If you wish to whitelist themes,
-# uncomment the next line
-#/wp-content/themes
+# AIRTH-specific
+logs/
+generated/
+private_keys/
