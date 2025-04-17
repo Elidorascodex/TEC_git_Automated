@@ -1,0 +1,30 @@
+# AIRTH System Configuration
+system:
+  name: "AIRTH - Automated Intelligence for The Elidoras Codex"
+  version: "1.0.0"
+
+services:
+  article_generator:
+    models:
+      - name: "gpt-4"
+        provider: "openai"
+        priority: 1
+      - name: "claude-3"
+        provider: "anthropic"
+        priority: 2
+
+  wordpress:
+    post_defaults:
+      status: "draft"
+      categories: ["AI Analysis", "AIRTH"]
+      tags: ["ai-generated", "airth", "analysis"]
+    
+  scheduling:
+    batch_size: 3
+    cooldown_minutes: 15
+    max_daily_posts: 10
+
+monitoring:
+  log_level: "INFO"
+  error_notification: true
+  performance_tracking: true
