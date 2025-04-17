@@ -41,6 +41,30 @@ wordpress-site/wp-content/backup-db/
 wordpress-site/wp-content/cache/
 wordpress-site/wp-content/backups/
 
+# WordPress Plugins
+wp-content/plugins/
+wp-content/plugins/*
+wp-content/plugins/ai-engine/
+wp-content/plugins/akismet/
+wp-content/plugins/all-in-one-wp-migration/
+wp-content/plugins/application-passwords/
+wp-content/plugins/breakdance/
+wp-content/plugins/git-remote-updater/
+wp-content/plugins/git-updater/
+wp-content/plugins/image-optimizer/
+wp-content/plugins/jetpack/
+wp-content/plugins/mailpoet/
+wp-content/plugins/media-cleaner/
+wp-content/plugins/media-file-renamer/
+wp-content/plugins/page-optimize/
+wp-content/plugins/rank-math-seo/
+wp-content/plugins/site-kit/
+wp-content/plugins/web-stories/
+wp-content/plugins/woocommerce/
+wp-content/plugins/woopayments/
+wp-content/plugins/wp-consent-api/
+wp-content/plugins/wp-pusher/
+
 # IDEs / Editors
 .vscode/
 .idea/
