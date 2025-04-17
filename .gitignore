@@ -28,11 +28,6 @@ wheels/
 
 # System
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
 Thumbs.db
 
 # WordPress
@@ -48,10 +43,10 @@ wordpress-site/wp-content/backups/
 
 # IDEs / Editors
 .vscode/
-*.code-workspace
-.settings/
 .idea/
 *.log
+*.code-workspace
+.settings/
 
 # Git / OS Noise
 *.swp
@@ -70,9 +65,8 @@ sftp.json
 **/sftp.json
 
 # Logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+*.log
+logs/
 
 # Database
 *.sqlite
