@@ -2,29 +2,61 @@
 system:
   name: "AIRTH - Automated Intelligence for The Elidoras Codex"
   version: "1.0.0"
+  environment: "production"
 
-services:
-  article_generator:
-    models:
-      - name: "gpt-4"
-        provider: "openai"
-        priority: 1
-      - name: "claude-3"
-        provider: "anthropic"
-        priority: 2
+wordpress:
+  site_url: "https://elidorascodex.com"
+  theme_path: "/wp-content/themes/tec-theme/"
+  default_categories:
+    - "AI Analysis"
+    - "AIRTH"
+  default_tags:
+    - "ai-generated"
+    - "airth"
+    - "analysis"
 
-  wordpress:
-    post_defaults:
-      status: "draft"
-      categories: ["AI Analysis", "AIRTH"]
-      tags: ["ai-generated", "airth", "analysis"]
-    
-  scheduling:
-    batch_size: 3
-    cooldown_minutes: 15
-    max_daily_posts: 10
+ai_services:
+  openai:
+    model: "gpt-4"
+    max_tokens: 4000
+    temperature: 0.7
+  anthropic:
+    model: "claude-3-opus-20240229"
+    max_tokens: 4000
+    temperature: 0.7
+  gemini:
+    model: "gemini-pro"
+    max_tokens: 2048
+    temperature: 0.7
+
+content_generation:
+  batch_size: 3
+  cooldown_minutes: 15
+  max_daily_posts: 10
+  content_types:
+    - analysis
+    - summary
+    - perspective
+
+storage:
+  bucket_name: "tec-content-storage"
+  content_path: "articles/"
+  media_path: "media/"
 
 monitoring:
   log_level: "INFO"
   error_notification: true
   performance_tracking: true
+  metrics:
+    - generation_time
+    - token_usage
+    - post_success_rate
+
+deployment:
+  auto_deploy: true
+  sftp:
+    enabled: true
+    sync_on_save: true
+  backup:
+    enabled: true
+    frequency: "daily"
