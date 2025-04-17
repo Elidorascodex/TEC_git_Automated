@@ -1,11 +1,38 @@
 # Node & Python
 node_modules/
 .env
+.env.*
+.env.local
+.env.*.local
 __pycache__/
 *.pyc
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
 
 # System
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
 
 # WordPress
@@ -13,9 +40,16 @@ wp-config.php
 wp-content/uploads/
 wp-content/cache/
 wp-content/backups/
+wordpress-site/wp-content/uploads/
+wordpress-site/wp-content/upgrade/
+wordpress-site/wp-content/backup-db/
+wordpress-site/wp-content/cache/
+wordpress-site/wp-content/backups/
 
 # IDEs / Editors
 .vscode/
+*.code-workspace
+.settings/
 .idea/
 *.log
 
@@ -30,3 +64,22 @@ wp-content/backups/
 logs/
 generated/
 private_keys/
+
+# SFTP Config
+sftp.json
+**/sftp.json
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Database
+*.sqlite
+*.db
+
+# Cloud credentials
+*.pem
+*.key
+service-account.json
+google-credentials.json
